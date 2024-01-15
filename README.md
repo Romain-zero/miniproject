@@ -2,7 +2,7 @@
 
 # member：
         Romain  2532675883@qq.com
-        Mott    1649525676@qq.com
+        Axel    1649525676@qq.com
         Lucas   1170532890@qq.com
 
 # function：
