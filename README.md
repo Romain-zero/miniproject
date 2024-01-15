@@ -23,3 +23,7 @@
                area: Asia
                size of population: 6446000
                capital city: 否
+
+# Other:
+        file com.aaaaa : achive function 1
+        file CIty      : achive function 2
