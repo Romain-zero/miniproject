@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="upperService" targetNamespace="http://www.com.aaaaa" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://www.com.aaaaa" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <wsdl:types>
+    <schema xmlns="http://www.w3.org/2001/XMLSchema">
+  <import namespace="http://www.com.aaaaa" schemaLocation="upper_schema1.xsd"/>
+</schema>
+  </wsdl:types>
+  <wsdl:message name="convertToUpperCase">
+    <wsdl:part name="parameters" element="tns:convertToUpperCase">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="convertToUpperCaseResponse">
+    <wsdl:part name="parameters" element="tns:convertToUpperCaseResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="upper">
+    <wsdl:operation name="convertToUpperCase">
+      <wsdl:input name="convertToUpperCase" message="tns:convertToUpperCase">
+    </wsdl:input>
+      <wsdl:output name="convertToUpperCaseResponse" message="tns:convertToUpperCaseResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="upperServiceSoapBinding" type="tns:upper">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="convertToUpperCase">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="convertToUpperCase">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="convertToUpperCaseResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="upperService">
+    <wsdl:port name="upperPort" binding="tns:upperServiceSoapBinding">
+      <soap:address location="http://localhost:8080/com.aaaaa/services/upperPort"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

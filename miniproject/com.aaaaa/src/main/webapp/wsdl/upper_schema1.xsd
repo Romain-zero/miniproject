@@ -1,0 +1,19 @@
+<xs:schema xmlns:tns="http://www.com.aaaaa" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="unqualified" targetNamespace="http://www.com.aaaaa" version="1.0">
+
+  <xs:element name="convertToUpperCase" type="tns:convertToUpperCase"/>
+
+  <xs:element name="convertToUpperCaseResponse" type="tns:convertToUpperCaseResponse"/>
+
+  <xs:complexType name="convertToUpperCase">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="inputString" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="convertToUpperCaseResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>
